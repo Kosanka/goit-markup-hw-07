@@ -81,8 +81,8 @@ img {
     padding-bottom: 120px;
 } */ 
 
-/*======================= HEADER =======================*/
-/*/////// MOBILE ///////*/
+/*======================= MOBILE-HEADER =======================*/
+
 @media screen and (max-width: 767px) {
  .menu {
     display: none;
@@ -154,10 +154,9 @@ img {
 }
 
 .mobile-menu-contact-list {
-    
-position: absolute;
-left: 40px;
-bottom: 128px;
+    position: absolute;
+    left: 40px;
+    bottom: 128px;
 }
 
 .mobile-menu-contact-tel {
@@ -211,6 +210,10 @@ bottom: 128px;
 .page-header {
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+            0px 1px 1px rgba(46, 47, 66, 0.16),
+            0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .page-header-container {
@@ -235,27 +238,78 @@ bottom: 128px;
     color: var(--primary-text-color-dark);
 }
 
+/*======================= MOBILE-HERO =======================*/
 
+.hero-section {
+    background: var(--secondary-background-color-dark);
+    padding-top: 112px;
+    padding-bottom: 112px;
+    text-align: center;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
+    background-size: cover;
+    /* max-width: 428px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+}
 
-/*///////////////////////// TABLET /////////////////////////*/
+.hero-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    color: var(--primary-text-color-white);
+    text-align: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-btn {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background: #4D5AE5;
+    color: var(--primary-text-color-white);
+    border: none;
+    border-radius: 4px;
+    min-width: 169px;
+    padding: 16px 32px 16px 32px;
+    margin-top: 48px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 56px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-btn:hover,
+.hero-btn:focus {
+    background-color: var(--accent-color);
+}
+
+/*======================= TABLET-HEADER =======================*/
 @media screen and (min-width: 768px){
    .mobile-menu {
-    display: none;
+        display: none;
    }
 
    .mobile-menu-open-btn {
-    display: none;
+        display: none;
    }
 
    .header-nav {
-    display: flex;
-    align-items: center;
-    column-gap: 120px;
+        display: flex;
+        align-items: center;
+        column-gap: 120px;
    }
 
    .menu {
-    display: flex;
-    gap: 40px;
+        display: flex;
+        gap: 40px;
    }
 
    .menu-link {
@@ -300,186 +354,50 @@ bottom: 128px;
    .contact-link:focus {
        color: var(--accent-color);
    }
+/*======================= HERO-TABLET =======================*/
+   .hero-section {
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
 
+    .hero-title {
+        font-size: 56px;
+        line-height: 1.07;
+        max-width: 496px;
 }
+}
+
+
+
+/*======================= DESKTOP-HEADER =======================*/
 
 @media screen and (min-width: 1158px) {
-
-}
-
-/*
-
-.contact-list {
-    display: flex;
-    margin-left: auto;
-    gap: 40px;
-}
-
-.contact-link {
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-
-
-
-
-
-
-
-
-
-
-/* .page-header {
-    border-bottom: 1px solid #e7e9fc;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-        0px 1px 1px rgba(46, 47, 66, 0.16),
-        0px 1px 6px rgba(46, 47, 66, 0.08);
-}
-
-.page-header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-nav {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    color: #4D5AE5;
-    font-family: "Raleway", sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    margin-right: 76px;
-    text-align: center;
-    display: inline-block;
-}
-
-.logo-header {
-    color: var(--primary-text-color-dark);
-}
-
-.menu {
-    display: flex;
-    gap: 40px;
-    
-}
-
-.menu-link {
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-dark);
-    padding: 24px 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    position: relative;
-}
-
-.current::after {
-    content: '';
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: #404BBF;
-    border-radius: 2px;
-    bottom: -1px;
-}
-
-.current{
-    color: #404bbf;
-}
-
-.menu-link:hover, .menu-link:focus{
-    color: var(--accent-color);
-}
-
-.address {
-    font-style: normal;
-}
+    .header-nav {
+        column-gap: 76px;
+    }
 
 .contact-list {
-    display: flex;
-    margin-left: auto;
-    gap: 40px;
+        display: flex;
+        margin-left: auto;
+        gap: 40px;
 }
 
-.contact-link {
-    font-style: normal;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-light);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .contact-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+ }
+
+/*======================= HERO-DESKTOP =======================*/
+    .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
 }
 
-.contact-link:hover, .contact-link:focus{
-    color: var(--accent-color);
-} */
 
 
-/*====================== hero ======================*/
-
-
-/* .hero-section {
-    background: var(--secondary-background-color-dark);
-    padding-top: 188px;
-    padding-bottom: 188px;
-    text-align: center;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
-    background-size: cover;
-    max-width: 1440px;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
-}
-
-.hero-title {
-    font-size: 16px;
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-white);
-    text-align: center;
-    max-width: 496px;
-    margin-left: auto;
-    margin-right: auto;
-}
-.hero-btn {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    background: #4D5AE5;
-    color: var(--primary-text-color-white);
-    border: none;
-    border-radius: 4px;
-    min-width: 169px;
-    padding: 16px 32px 16px 32px;
-    margin-top: 48px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    height: 56px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-}
-
-.hero-btn:hover, .hero-btn:focus {
-    background-color: var(--accent-color);
-} */
 
 
 /*=================== advantages ===================*/
