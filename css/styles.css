@@ -84,6 +84,9 @@ img {
 /*======================= MOBILE-HEADER =======================*/
 
 @media screen and (max-width: 767px) {
+
+
+
  .menu {
     display: none;
 }
@@ -204,8 +207,15 @@ img {
     fill: var(--primary-background-color-light);
 }
 
+.advantages-picture-box {
+    display: none;
 }
 
+}
+.section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
 
 .page-header {
     padding-top: 24px;
@@ -290,8 +300,41 @@ img {
 .hero-btn:focus {
     background-color: var(--accent-color);
 }
+/*======================== MOBILE-ADVANTAGES ========================*/
+.advantages-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 72px;
+}
+
+        
+.advantages-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color-dark);
+        margin-bottom: 8px;
+        text-align: center;      
+}
+
+.advantages-text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color-light);
+}
 
 /*======================= TABLET-HEADER =======================*/
+@media screen and (max-width: 1157px){
+    .advantages-picture-box {
+        display: none;
+    }
+}
+
+
 @media screen and (min-width: 768px){
    .mobile-menu {
         display: none;
@@ -354,7 +397,7 @@ img {
    .contact-link:focus {
        color: var(--accent-color);
    }
-/*======================= HERO-TABLET =======================*/
+/*======================= TABLET-HERO =======================*/
    .hero-section {
         padding-top: 112px;
         padding-bottom: 112px;
@@ -364,6 +407,10 @@ img {
         font-size: 56px;
         line-height: 1.07;
         max-width: 496px;
+}
+/*======================== TABLET-ADVANTAGES ========================*/
+    .advantages-item {
+    flex-basis: calc((100% - 24px) / 2);
 }
 }
 
@@ -388,19 +435,52 @@ img {
         letter-spacing: 0.02em;
  }
 
-/*======================= HERO-DESKTOP =======================*/
+/*======================= DESKTOP-HERO =======================*/
     .hero-section {
         padding-top: 188px;
         padding-bottom: 188px;
         max-width: 1440px;
     }
+
+/*======================== DESKTOP-ADVANTAGES ========================*/
+
+.advantages-picture-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.advantages-picture-icon {
+    margin: 24px 100px;
+}
+
+.advantages-list {
+    gap: 24px;
+    }
+
+.advantages-item {
+    flex-basis: calc((100% - 94px) / 4);
+
+}
+.advantages-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.20;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-dark);
+}
+
+.advantages-text {
+    font-weight: 400;
+}
 }
 
 
-
-
-
-/*=================== advantages ===================*/
+/*======================== ADVANTAGES ========================*/
 
 /* 
 
