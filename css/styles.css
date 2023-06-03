@@ -85,8 +85,6 @@ img {
 
 @media screen and (max-width: 767px) {
 
-
-
  .menu {
     display: none;
 }
@@ -211,6 +209,10 @@ img {
     display: none;
 }
 
+.product-section {
+    display: none;
+}
+
 }
 .section {
     padding-top: 96px;
@@ -327,13 +329,133 @@ img {
         color: var(--primary-text-color-light);
 }
 
-/*======================= TABLET-HEADER =======================*/
+/*======================== MOBILE-TEAM ========================*/
+
+.team-section {
+    background-color: #F4F4FD;
+}
+
+.team-main-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--primary-text-color-dark);
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.team-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-dark);
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.team-subtitle {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color-light);
+    text-align: center;
+}
+
+.team-title-box {
+    background-color: #FFFFFF;
+    padding: 32px 0;
+}
+/*icon*/
+ .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-top: 8px;
+}
+
+.social-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4D5AE5;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+}
+
+.social-list-icon {
+    fill: var(--primary-background-color-light);
+}
+
+.social-list-link:hover, .social-list-link:focus {
+background-color: #404BBF;
+}
+
+/*======================== MOBILE-CUSTOMERS ========================*/
+
+.customers-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 16px;
+    justify-content: center;
+}
+
+.customers-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--primary-text-color-dark);
+    margin-bottom: 72px;
+}
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 88px;
+    color: #8E8F99;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.customers-icon {
+    fill: currentColor;
+}
+
+
+.customers-link:hover,
+.customers-link:focus {
+    color: #404BBF;
+    border-color: #404BBF;
+}
+
+/*======================== MOBILE-FOOTER ========================*/
+
+
+
+/*___________________________________TABLET___________________________________*/
+
 @media screen and (max-width: 1157px){
+/*======================= TABLET-HEADER =======================*/
     .advantages-picture-box {
         display: none;
     }
+    .product-section {
+        display: none;
+    }
 }
-
 
 @media screen and (min-width: 768px){
    .mobile-menu {
@@ -412,13 +534,41 @@ img {
     .advantages-item {
     flex-basis: calc((100% - 24px) / 2);
 }
+
+/*======================== TABLET-TEAM ========================*/
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
 }
 
+.team-item {
+    flex-basis: calc((100% - 24px) / 2);
+    border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
+/*======================== TABLET-CUSTOMERS ========================*/
+.customers-list {
+    column-gap: 24px;
+}
 
-/*======================= DESKTOP-HEADER =======================*/
+.customers-link {
+    width: 168px;
+}
+
+/*======================== TABLET-FOOTER ========================*/
+
+}
+
+/*___________________________________DESKTOP___________________________________*/
 
 @media screen and (min-width: 1158px) {
+    .section {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+/*======================= DESKTOP-HEADER =======================*/
     .header-nav {
         column-gap: 76px;
     }
@@ -477,65 +627,9 @@ img {
 .advantages-text {
     font-weight: 400;
 }
-}
 
-
-/*======================== ADVANTAGES ========================*/
-
-/* 
-
-.advantages-picture-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 112px;
-    background-color: #f4f4fd;
-    border-radius: 4px;
-    margin-bottom: 8px;
-}
-
-.advantages-picture-list {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 8px;
-    
-}
-.advantages-picture-icon{
-margin: 24px 100px;
-} */
-
-/**/
-
-/* .advantages-list{
-    display: flex;
-    gap: 24px;
-    margin-top: 8px;
-}
-
-.advantages-item {
-    flex-basis: calc((100% - 94px) / 4);
-    
-}
-
-.advantages-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-dark);
-    margin-bottom: 8px;
-}
-.advantages-text {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-light);
-} */
-
-
-/*====================== product ======================*/
-
-/* .product-section {
+/*======================== DESKTOP-PRODUCT ========================*/
+.product-section {
     padding-top: 0;
 }
 
@@ -557,134 +651,21 @@ margin: 24px 100px;
     text-transform: capitalize;
     color: var(--primary-text-color-dark);
     margin-bottom: 72px;
-} */
-
-
-/*========================= team =========================*/
-
-
-/* .team-section {
-    background-color: #F4F4FD;
 }
 
-.team-main-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--primary-text-color-dark);
-    text-align: center;
-    margin-bottom: 72px;
-}
-
-.team-list {
-    display: flex;
-    gap: 24px;   
-}
-
+/*======================== DESKTOP-TEAM ========================*/
 .team-item {
-    flex-basis: calc((100% - 72px) / 4);
-    border-radius: 0px 0px 4px 4px;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    flex-basis: calc((100% - 72px) / 4);   
 }
-
-
-.team-title-box {
-    background-color: #FFFFFF;
-    padding: 32px 0;
-}
-
-.team-title {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-dark);
-    text-align: center;
-    margin-bottom: 8px;
-}
-
-.team-subtitle {
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--primary-text-color-light);
-    text-align: center;
-} */
-
-/*icon*/
-/* .social-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: 8px;
-}
-
-.social-list-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #4D5AE5;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    
-}
-
-.social-list-icon {
-    fill: var(--primary-background-color-light);
-}
-
-.social-list-link:hover, .social-list-link:focus {
-background-color: #404BBF;
-} */
-
-/*=================== customers ===================*/
-
-/* .team-title-customers {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    text-align: center;
-    letter-spacing: 0.02em;
-    text-transform: capitalize;
-    color: var(--primary-text-color-dark);
-    margin-bottom: 72px;
-}
-
-.team-customers-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
+/*======================== DESKTOP-CUSTOMERS ========================*/
+.customers-list {
     gap: 24px;
 }
 
-
-.team-customers-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 168px;
-    height: 88px;
-    color: #8E8F99;
-    border: 1px solid #8E8F99;
-    border-radius: 4px;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.team-customers-icon{
-    fill:currentColor;
+/*======================== DESKTOP-FOOTER ========================*/
 }
 
 
-.team-customers-link:hover,
-.team-customers-link:focus {
-    color: #404BBF;
-    border-color: #404BBF;
-} */
 
 /*========================= footer =========================*/
 
