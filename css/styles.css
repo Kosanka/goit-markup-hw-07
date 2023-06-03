@@ -214,6 +214,7 @@ img {
 }
 
 .logo-footer {
+    margin-bottom: 16px;
     display: block;
     text-align: center;
 }
@@ -480,6 +481,8 @@ background-color: #404BBF;
 
 .logo-footer {
     margin-bottom: 16px;
+    /* display: block;
+        text-align: center; */
 }
 
 .footer-text {
@@ -596,6 +599,7 @@ background-color: #404BBF;
 /*___________________________________TABLET___________________________________*/
 
 @media screen and (max-width: 1157px){
+    
 /*======================= TABLET-HEADER =======================*/
     .advantages-picture-box {
         display: none;
@@ -605,7 +609,8 @@ background-color: #404BBF;
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px)
+{
    .mobile-menu {
         display: none;
    }
@@ -707,10 +712,18 @@ background-color: #404BBF;
 
 /*======================== TABLET-FOOTER ========================*/
 
-
-
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
 }
-
+.footer-form {
+    display: flex;
+}
+.footer-form-input {
+    width: 264px;
+    margin-right: 24px;
+}
+}
 /*___________________________________DESKTOP___________________________________*/
 
 @media screen and (min-width: 1158px) {
