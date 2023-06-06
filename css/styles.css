@@ -214,6 +214,11 @@ img {
         display: none;
     }
      
+    .customers-item {
+        height: 88px;
+        width: calc((100% - 16px) / 2);
+    }
+
     .footer-form-input {
         width: 100%;
     }
@@ -237,6 +242,15 @@ img {
         .subscribe {
         margin-top: 72px;
     }
+        @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+        (min-resolution: 192dpi) and (max-width: 767px),
+        (min-resolution: 2dppx) and (max-width: 767px) {
+            .hero-section {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)), url('../images/hero/people-office-mobile@2x.jpg');
+            }
+    
+        }
 }
 
 .page-header {
@@ -274,26 +288,24 @@ img {
 /*==========================MOBILE-HERO==========================*/
 
 .hero-section {
+  
     max-width: 428px;
     padding-top: 112px;
     padding-bottom: 112px;
     text-align: center;
     background: var(--secondary-background-color-dark);
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+     rgba(46, 47, 66, 0.7)), url(../images/hero/people-office.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
 }
 
-@media (min-device-pixel-ratio: 2) and (max-width: 767px),
-(min-resolution: 192dpi) and (max-width: 767px),
-(min-resolution: 2dppx) and (max-width: 767px) {
-    .hero-section {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                rgba(46, 47, 66, 0.7)), url('../images/hero/people-office@2x.jpg');
-    }
-}
+
+
+
+
 
 .hero-title {
     font-weight: 700;
@@ -462,10 +474,7 @@ img {
     margin-bottom: 72px;
 }
 
-.customers-item {
-    height: 88px;
-    width: calc((100% - 16px) / 2);
-}
+
 
 .customers-link {
     display: flex;
@@ -858,30 +867,292 @@ img {
 }
 
 
-
-
-
-@media screen and (max-width: 767px){
+@media screen and (max-width: 1157px){
 .advantages-picture-box {
         display: none;
     }
     
-    .product-section {
+.product-section {
         display: none;
     }
+
+        .footer-container {
+            flex-wrap: wrap;
+            gap: 72px 24px;
+            width: 552px;
+        }
+    
+        .customers-item {
+            flex-basis: calc((100% - 48px) / 3);
+        }
 }
 
 @media screen and (min-width: 768px) {
-    /*==========================MOBILE-HEADER==========================*/
-    /*==========================MOBILE-HERO==========================*/
-    /*==========================MOBILE-ADVANTAGES==========================*/
-    /*==========================MOBILE-TEAM==========================*/
-    /*==========================MOBILE-CUSTOMERS==========================*/
-    /*==========================FOOTER-TEAM==========================*/
-    /*==========================MOBILE-BACKDROP==========================*/
+    /*==========================TABLET-HEADER==========================*/
+    .mobile-menu {
+            display: none;
+        }
+    
+        .mobile-menu-open-btn {
+            display: none;
+        }
+    
+        .header-nav {
+            display: flex;
+            align-items: center;
+            column-gap: 120px;
+        }
+    
+        .menu {
+            display: flex;
+            gap: 40px;
+        }
+    
+        .menu-link {
+            font-weight: 500;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: var(--primary-text-color-dark);
+            padding: 24px 0;
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+    
+        .current::after {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+            bottom: -1px;
+        }
+    
+        .current {
+            color: var(--accent-color);
+        }
+    
+        .menu-link:hover,
+        .menu-link:focus {
+            color: var(--accent-color);
+        }
+    
+        .contact-link {
+            font-style: normal;
+            font-size: 12px;
+            line-height: 1.17;
+            letter-spacing: 0.04em;
+            color: var(--primary-text-color-light);
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    
+        .contact-link:hover,
+        .contact-link:focus {
+            color: var(--accent-color);
+        }
+    /*==========================TABLET-HERO==========================*/
+        .hero-section {
+            /* padding-top: 188px;
+            padding-bottom: 188px; */
+            max-width: 768px;
+        }
+        @media (min-device-pixel-ratio: 2) and (min-width: 768px),
+        (min-resolution: 192dpi) and (min-width: 768px),
+        (min-resolution: 2dppx) and (min-width: 768px) {
+            .hero-section {
+                background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                        rgba(46, 47, 66, 0.7)), url('../images/hero/people-office-tablet@2x.jpg');
+            }
+        }
+    /*==========================TABLET-ADVANTAGES==========================*/
+        .advantages-item {
+            flex-basis: calc((100% - 24px) / 2);
+        }
+    /*==========================TABLET-TEAM==========================*/
+        .team-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+    
+        .team-item {
+            /* flex-basis: calc((100% - 24px) / 2); */
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+        }
+    /*==========================TABLET-CUSTOMERS==========================*/
+        .customers-list {
+            column-gap: 24px;
+            row-gap: 72px;
+        }
+    
+        .customers-link {
+            width: 168px;
+        }
+    /*==========================TABLET-FOOTER==========================*/
+        .footer-container {
+            display: flex;
+            align-items: baseline;
+        }
+    
+        .footer-form-input {
+            width: 264px;
+        }
+    
+        .footer-box-text {
+            margin-right: 24px;
+        }
+    
+        .footer-form {
+            display: flex;
+            gap: 24px;
+        }
+    /*==========================TABLET-BACKDROP==========================*/
     .modal {
              width: 408px;
             }
+}
+@media screen and (min-width: 1158px) {
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    /*=======================DESKTOP-HEADER=======================*/ 
+    .header-nav {
+        column-gap: 76px;
+    }
+
+    .contact-list {
+        display: flex;
+        margin-left: auto;
+        gap: 40px;
+    }
+
+    .contact-link {
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+
+    }
+
+    /*=======================DESKTOP-HERO=======================*/ 
+    .hero-section {
+        padding-top: 188px;
+        padding-bottom: 188px;
+        max-width: 1440px;
+    }
+@media (min-device-pixel-ratio: 2) and (min-width: 1158px),
+(min-resolution: 192dpi) and (min-width: 1158px),
+(min-resolution: 2dppx) and (min-width: 1158px) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)), url('../images/hero/people-office-desktop@2x.jpg');
+    }
+    }
+
+
+    /*========================DESKTOP-ADVANTAGES========================*/ 
+    .advantages-picture-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 112px;
+        background-color: #f4f4fd;
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+
+    .advantages-picture-icon {
+        margin: 24px 100px;
+    }
+
+    .advantages-list {
+        gap: 24px;
+    }
+
+    .advantages-item {
+        flex-basis: calc((100% - 94px) / 4);
+
+    }
+
+    .advantages-title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.20;
+        letter-spacing: 0.02em;
+        color: var(--primary-text-color-dark);
+    }
+
+    .advantages-text {
+        font-weight: 400;
+    }
+
+    /*========================DESKTOP-PRODUCT========================*/ 
+    .product-section {
+        padding-top: 0;
+    }
+
+    .product-list {
+        display: flex;
+        gap: 24px;
+    }
+
+    .product-item {
+        flex-basis: calc((100% - 48px) /3);
+    }
+
+    .product-title {
+        text-align: center;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        color: var(--primary-text-color-dark);
+        margin-bottom: 72px;
+    }
+
+    /*========================DESKTOP-TEAM========================*/ 
+    .team-item {
+        flex-basis: calc((100% - 72px) / 4);
+    }
+
+    /*========================DESKTOP-CUSTOMERS========================*/ 
+    .customers-list {
+        gap: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*========================DESKTOP-FOOTER========================*/ 
+    .page-footer {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .footer-box-text {
+        margin-right: 120px;
+    }
+
+    .footer-box-social {
+        margin-right: 80px;
+    }
+
+    .footer-subscribe-btn-wrapper {
+        position: relative;
+        display: block;
+    }
+
+    .footer-form-btn-icon {
+        position: absolute;
+        margin-left: 16px;
+        top: 8px;
+        right: 24px;
+
+    }
 }
 /*======================= header =======================*/
 
