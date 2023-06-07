@@ -887,8 +887,11 @@ img {
     justify-content: center;
 }
 .footer-container {
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap;    
+}
+.footer-form {
+    align-items: center;
+    justify-content: center;
 }
 }
 
@@ -1021,13 +1024,12 @@ img {
         width: 264px;
     }
     
-    .footer-box-text {
-        margin-right: 24px;
-    }
-    
     .footer-form {
         display: flex;
-        gap: 24px;
+    }
+
+    .footer-form-wrapper {
+        margin-right: 24px;
     }
 
     /*==========================TABLET-BACKDROP==========================*/
@@ -1156,7 +1158,7 @@ img {
     }
 
     /*========================DESKTOP-FOOTER========================*/ 
-    
+
     .page-footer {
         padding-top: 100px;
         padding-bottom: 100px;
