@@ -47,19 +47,6 @@ img {
     display: block;
 }
 
-/* .container {
-    width: 1158px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.section {
-    padding-top: 120px;
-    padding-bottom: 120px;
-} */
-
 .container {
     max-width: 428px;
     padding-left: 16px;
@@ -120,23 +107,36 @@ img {
     }
 
     .mobile-menu-container {
-        position: relative;
+    position: relative;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
         padding-top: 80px;
-        padding-left: 24px;
-    }
-    
-    .mobile-menu-list {
-            margin-bottom: 284px;
+        padding-bottom: 40px;
+        padding-left: 40px;
     }
 
-    .mobile-menu-link {
-        font-family: 'Roboto', sans-serif;
-        font-style: normal;
+    .mobile-menu-list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+        margin-bottom: auto;
+    }
+
+    .mobile-wrapper-contact {
+        margin-top: auto;
+    }
+
+    .mobile-menu-item {     
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         text-transform: capitalize;
+
+    }
+    .mobile-menu-link {
         color: var(--primary-text-color-dark);
     }
 
@@ -157,21 +157,24 @@ img {
         background: transparent;
         border: 1px solid #2E2F42;
         border-radius: 50%;
+        background: #e7e9fc;
     }
 
-    .mobile-menu-contact-list {
-        margin-bottom: 48px;
+    .mobile-menu-contact-list{
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
     }
 
     .mobile-menu-contact-tel {
-        display: block;
         font-style: normal;
+        display: block;
         font-weight: 700;
         font-size: 36px;
         line-height: 1.11;
         letter-spacing: 0.02em;
         color: #4D5AE5;
-        margin-bottom: 40px;
+        
     }
 
     .mobile-menu-contact-mail {
@@ -186,9 +189,9 @@ img {
 
     .mobile-menu-social-list {
         display: flex;
-        justify-content: center;
-        align-items: center;
         gap: 56px;
+        margin-top: 48px;
+        flex-wrap: wrap;
     }
 
     .mobile-menu-social-link {
@@ -210,10 +213,18 @@ img {
         display: none;
     }
 
+    .advantages-title {
+        text-align: center;
+    }
+
     .product-section {
         display: none;
     }
      
+    .team-item:not(:last-child) {
+        margin-bottom: 72px;
+    }
+
     .customers-item {
         height: 88px;
         width: calc((100% - 16px) / 2);
@@ -222,14 +233,17 @@ img {
     .footer-form-input {
         width: 100%;
     }
+
         .footer-text {
         margin-left: auto;
         margin-right: auto;
     }
+
         .footer-text-subscribe,
-    .footer-text-social {
+        .footer-text-social {
         text-align: center;
     }
+
         .footer-subscribe-btn {
         margin-left: auto;
         margin-right: auto;
@@ -239,9 +253,11 @@ img {
         .footer-box-social {
         margin-top: 72px;
     }
+
         .subscribe {
         margin-top: 72px;
     }
+
         @media (min-device-pixel-ratio: 2) and (max-width: 767px),
         (min-resolution: 192dpi) and (max-width: 767px),
         (min-resolution: 2dppx) and (max-width: 767px) {
@@ -249,7 +265,6 @@ img {
                 background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                         rgba(46, 47, 66, 0.7)), url('../images/hero/people-office-mobile@2x.jpg');
             }
-    
         }
 }
 
@@ -276,7 +291,6 @@ img {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-right: 76px;
     text-align: center;
     display: inline-block;
 }
@@ -358,7 +372,7 @@ img {
     letter-spacing: 0.02em;
     color: var(--primary-text-color-dark);
     margin-bottom: 8px;
-    text-align: center;
+    
 }
 
 .advantages-text {
@@ -394,8 +408,8 @@ img {
 .team-item {
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    margin-bottom: 72px;
 }
+
 
 .team-title {
     font-weight: 500;
@@ -473,7 +487,6 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 190px;
     height: 88px;
     color: #8E8F99;
     border: 1px solid #8E8F99;
@@ -552,7 +565,9 @@ img {
 .footer-social-list-icon {
     fill: var(--primary-background-color-light);
 }
+
 /*===========subscribe===========*/
+
 .footer-text-subscribe {
     font-weight: 500;
     line-height: 1.5;
@@ -625,6 +640,7 @@ img {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal {
     position: absolute;
     top: 50%;
@@ -867,16 +883,13 @@ img {
     .product-section {
         display: none;
     }
-
-    .footer-container {
-        flex-wrap: wrap;
-        gap: 72px 24px;
-        width: 552px;
-    }
+.customers-list {
+    justify-content: center;
+}
+.footer-container {
+    flex-wrap: wrap;
     
-    .customers-item {
-        flex-basis: calc((100% - 48px) / 3);
-    }
+}
 }
 
 @media screen and (min-width: 768px) {
@@ -895,6 +908,7 @@ img {
         display: flex;
         align-items: center;
         column-gap: 120px;
+        
     }
     
     .menu {
@@ -945,7 +959,9 @@ img {
     .contact-link:focus {
         color: var(--accent-color);
     }
+
     /*==========================TABLET-HERO==========================*/
+
     .hero-section {
         max-width: 768px;
     }
@@ -957,11 +973,15 @@ img {
                     rgba(46, 47, 66, 0.7)), url('../images/hero/people-office-tablet@2x.jpg');
         }
     }
+
     /*==========================TABLET-ADVANTAGES==========================*/
+
     .advantages-item {
         flex-basis: calc((100% - 24px) / 2);
     }
+
     /*==========================TABLET-TEAM==========================*/
+
     .team-list {
         display: flex;
         flex-wrap: wrap;
@@ -972,7 +992,9 @@ img {
         border-radius: 0px 0px 4px 4px;
         box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     }
+
     /*==========================TABLET-CUSTOMERS==========================*/
+
     .customers-list {
         column-gap: 24px;
         row-gap: 72px;
@@ -981,8 +1003,16 @@ img {
     .customers-link {
         width: 168px;
     }
+
     /*==========================TABLET-FOOTER==========================*/
+
+    .logo-footer {
+        text-align: left;
+    }
+    
     .footer-container {
+        gap: 72px 24px;
+        max-width: 552px;
         display: flex;
         align-items: baseline;
     }
@@ -999,7 +1029,9 @@ img {
         display: flex;
         gap: 24px;
     }
+
     /*==========================TABLET-BACKDROP==========================*/
+
     .modal {
         width: 408px;
     }
@@ -1029,6 +1061,7 @@ img {
     }
 
     /*=======================DESKTOP-HERO=======================*/ 
+
     .hero-section {
         padding-top: 188px;
         padding-bottom: 188px;
@@ -1045,6 +1078,7 @@ img {
 
 
     /*========================DESKTOP-ADVANTAGES========================*/ 
+
     .advantages-picture-box {
         display: flex;
         justify-content: center;
@@ -1081,6 +1115,7 @@ img {
     }
 
     /*========================DESKTOP-PRODUCT========================*/ 
+
     .product-section {
         padding-top: 0;
     }
@@ -1106,11 +1141,13 @@ img {
     }
 
     /*========================DESKTOP-TEAM========================*/ 
+
     .team-item {
         flex-basis: calc((100% - 72px) / 4);
     }
 
     /*========================DESKTOP-CUSTOMERS========================*/ 
+
     .customers-list {
         gap: 24px;
         display: flex;
@@ -1119,6 +1156,7 @@ img {
     }
 
     /*========================DESKTOP-FOOTER========================*/ 
+    
     .page-footer {
         padding-top: 100px;
         padding-bottom: 100px;
